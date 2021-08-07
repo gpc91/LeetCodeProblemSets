@@ -35,20 +35,7 @@ namespace LeetCode.Problems.Easy.FizzBuzz
 
         public void Execute()
         {
-            int n;
-            while (true) // limit input only to digits between 1 and 10000
-            {
-                Console.Write("Enter a number between 1 and 10,000: ");
-                if (int.TryParse(Console.ReadLine(), out n) && (n > 0 && n <= 10000))
-                {
-                    Console.Clear();
-                    break;
-                }
-                else
-                {
-                    Console.Clear();
-                }
-            }
+            int n = LeetCode.Helper.ReadInteger(1, 10000);            
             List<string> fb = (List<string>)FizzBuzz(n);
 
             // Print out the List object formatted like an array of strings.

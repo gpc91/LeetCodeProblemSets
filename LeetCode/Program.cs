@@ -1,6 +1,6 @@
 ﻿using System;
 
-using LeetCode.Problems.Easy.Maximum69Number;
+using LeetCode.Problems.Easy.FizzBuzz;
 namespace LeetCode
 {
     class Program
