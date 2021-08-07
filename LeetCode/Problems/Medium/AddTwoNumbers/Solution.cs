@@ -46,7 +46,7 @@ namespace LeetCode.Problems.Medium.AddTwoNumbers
 
     }
 
-    public class Solution
+    public class Solution : IExecutable
     {
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
@@ -78,7 +78,18 @@ namespace LeetCode.Problems.Medium.AddTwoNumbers
                 }
             }
             return root;
+        }       
+        public void Execute()
+        {
+            ListNode l1 = ListNode.Build(2, 3, 4);
+            l1.Print();
+
+            ListNode l2 = ListNode.Build(5, 6, 8);
+            l2.Print();
+
+            Solution solution = new Solution();
+            ListNode result = solution.AddTwoNumbers(l1, l2);
+            result.Print();
         }
-       
     }
 }
